@@ -17,6 +17,7 @@
 	return FALSE
 
 /mob/zshadow/New(var/mob/L)
+	// We deliberately do not call ..() for speed and to avoid being in mob lists.
 	if(!istype(L))
 		qdel(src)
 		return
